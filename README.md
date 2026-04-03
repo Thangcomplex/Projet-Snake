@@ -23,3 +23,9 @@ Un jeu Snake développé en C++ avec le framework Qt.
 3. Lance avec **Build → Run**
 
 ## 📁 Structure du projet
+├── main.cpp
+├── menu.cpp / menu.hpp
+├── jeu.cpp / jeu.hpp
+├── snakewindow.cpp / snakewindow.hpp
+├── Sound/
+└── README.md
