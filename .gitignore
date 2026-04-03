@@ -1,0 +1,7 @@
+obj/
+bin/
+moc_*.cpp
+*.depend
+*.layout
+Thumbs.db
+desktop.ini

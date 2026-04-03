@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            // "compilerPath": "D:/MSYS2/ucrt64/bin/g++.exe",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/thang_3hv47vs/Desktop/CPP/Projet Cpp/qtbase-small-5.15.2-x64/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
