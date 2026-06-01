@@ -1,7 +1,58 @@
-obj/
-bin/
+# Compiled object files
+*.o
+*.obj
+*.lo
+*.slo
+
+# Compiled dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+snake
+snake_*
+
+# Qt build artifacts
 moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.moc
+Makefile.Debug
+Makefile.Release
+debug/
+release/
+build/
+build-*/
+
+# Code::Blocks
 *.depend
 *.layout
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
 Thumbs.db
-desktop.ini
+
+# Archives
+*.zip
+*.tar.gz
+*.7z
+
+# Logs
+*.log
