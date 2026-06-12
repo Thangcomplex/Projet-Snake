@@ -1,58 +1,16 @@
-# Compiled object files
 *.o
 *.obj
-*.lo
-*.slo
-
-# Compiled dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Compiled static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
 *.exe
-*.out
-*.app
-snake
-snake_*
-
-# Qt build artifacts
-moc_*.cpp
-moc_*.h
-qrc_*.cpp
-ui_*.h
-*.moc
-Makefile.Debug
-Makefile.Release
-debug/
-release/
-build/
-build-*/
-
-# Code::Blocks
+*.dll
+bin/
+obj/
+Debug/
+Release/
 *.depend
 *.layout
-
-# IDE
+*.user
 .vscode/
 .idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Archives
 *.zip
-*.tar.gz
-*.7z
-
-# Logs
-*.log
+moc_*.cpp
+moc_*.h
