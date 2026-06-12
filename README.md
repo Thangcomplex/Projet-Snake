@@ -1,86 +1,48 @@
-# 🐍 Snake — Application desktop C++ / Qt
+# Snake — Application desktop C++/Qt
 
-Jeu Snake développé en **C++ orienté objet** avec le framework **Qt 5**, dans le cadre d'un projet académique à l'INSA Centre-Val de Loire.
+Jeu Snake développé en C++ avec le framework Qt 5, intégrant la bibliothèque 
+audio FMOD. Architecture orientée objet multi-fenêtres avec gestion d'événements 
+clavier personnalisés.
 
-L'objectif pédagogique était de pratiquer la **programmation orientée objet**, la **séparation logique/interface**, et la **compilation multi-plateforme** (Linux, macOS, Windows).
+## Fonctionnalités
 
----
+- Architecture OO sur 4 classes (`Jeu`, `SnakeWindow`, `Menu`, `SnakeButton`)
+- Deux modes de jeu :
+  - **Mode Niveaux** : terrain avec murs, 3 fruits pour passer au niveau suivant
+  - **Mode Infini** : terrain sans murs, traversée des bords (téléportation)
+- Système de niveaux avec timer décompte
+- Détection de collisions (murs, corps du serpent)
+- Gestion audio temps réel via FMOD (effets sonores sur événements)
+- Classe `SnakeButton` héritant de `QPushButton` avec événements clavier personnalisés
 
-## ✨ Fonctionnalités
+## Technologies
 
-- **Mode Niveaux** — progression à travers plusieurs niveaux avec murs et obstacles ; manger 3 fruits débloque le niveau suivant.
-- **Mode Infini** — terrain sans bords, le serpent traverse l'écran et réapparaît de l'autre côté.
-- **Menu interactif** avec boutons personnalisés (`SnakeButton`).
-- **Effets sonores** via la bibliothèque FMOD.
+- **Langage** : C++
+- **Framework GUI** : Qt 5.15 (QWidget, QFrame, signals/slots)
+- **Audio** : FMOD
+- **IDE** : Code::Blocks
 
----
+## Concepts C++ démontrés
 
-## 🏗️ Architecture
+- Héritage et polymorphisme (QWidget, QFrame, QPushButton)
+- Surcharge d'opérateurs (`==`, `!=`, `=` sur classe `Position` et `Jeu`)
+- Constructeurs, constructeur de copie, destructeur
+- Gestion de bibliothèques externes (FMOD)
+- Énumérations typées (`Case`, `Direction`)
 
-Le code est organisé en **5 modules** avec séparation stricte logique métier / interface :
+## Compilation
 
-| Module | Rôle |
-|---|---|
-| `main.cpp` | Point d'entrée, initialisation Qt |
-| `menu.cpp` / `menu.hpp` | Menu principal, sélection du mode de jeu |
-| `jeu.cpp` / `jeu.hpp` | Logique du jeu (déplacement, collisions, score) |
-| `snakewindow.cpp` / `snakewindow.hpp` | Fenêtre de jeu, rendu graphique |
-| `snakebutton.cpp` / `snakebutton.hpp` | Composant bouton personnalisé |
+Projet Code::Blocks (`snake_win1.cbp` pour Windows, `snake_linux.cbp` pour Linux). 
+Nécessite Qt 5 et FMOD installés sur le système.
 
----
+## Structure du projet
 
-## 🛠️ Technologies
+- `main.cpp` — point d'entrée
+- `menu.cpp / menu.hpp` — menu de sélection des modes
+- `jeu.cpp / jeu.hpp` — logique du jeu, gestion du serpent et des fruits
+- `snakewindow.cpp / snakewindow.hpp` — fenêtre principale et rendu
+- `snakebutton.cpp / snakebutton.hpp` — bouton personnalisé avec gestion clavier
 
-- **C++** (C++11)
-- **Qt 5.15** (widgets, signaux/slots)
-- **FMOD** (audio)
-- **Makefiles** dédiés Linux / macOS / Windows
+## Auteur
 
----
-
-## 🚀 Compilation & exécution
-
-### Linux
-```bash
-make -f Makefile_linux
-./snake
-```
-
-### macOS
-```bash
-make -f Makefile_macos
-./snake
-```
-
-### Windows
-Ouvrir `snake_win1.cbp` avec **Code::Blocks**, puis **Build → Run**.
-
-### Prérequis
-- Qt 5.15 installé (`qt5-default` sur Debian/Ubuntu, `brew install qt@5` sur macOS).
-- Compilateur C++ supportant C++11 (g++, clang).
-- FMOD (les DLL nécessaires sont gérées par les Makefiles).
-
----
-
-## 📁 Structure du projet
-
-```
-.
-├── main.cpp
-├── menu.cpp / menu.hpp
-├── jeu.cpp / jeu.hpp
-├── snakewindow.cpp / snakewindow.hpp
-├── snakebutton.cpp / snakebutton.hpp
-├── data/              # ressources graphiques
-├── sound/             # effets sonores
-├── Makefile_linux
-├── Makefile_macos
-└── snake_win1.cbp     # projet Code::Blocks Windows
-```
-
----
-
-## 👤 Auteur
-
-**PHAM Duc Thang** — élève-ingénieur INSA Centre-Val de Loire
-[GitHub](https://github.com/Thangcomplex) · [LinkedIn](https://www.linkedin.com/in/DucThangPHAM)
+PHAM Duc Thang — Élève ingénieur INSA Centre Val de Loire
