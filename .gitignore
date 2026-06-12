@@ -1,28 +1,16 @@
-Pour mener bien ce projet, voici c'est mon plan:
-
-E1:Conception & développement du capteur
-- D'abord, il faut faire une etude comparatif entre les modes de mesure de niveau d'eau (Mesure par Ultrasons, Mesure par Pression, Mesure Capacitive Hydrostatique,...) pour en choisir le meilleur parmi les autres. Les critere pour le choisir sont:
-	a) Fiabilité en environnement extérieur
-	b) Compatibilité multi-supports
-	c) ...
-
-	+ Detaillement, je ferais 2 comparaisons, premierement c'est la comparaison theorique (en utilisant les lois physique et les fiches techniques), deuxiement c'est la comparaison numerique ( en modelisant l'environnement hostile, efficacite energetique,...). Enfin, l'issue de ces deux etudes est la creation d'une matrice de decision pour choisir le mode de mesure du niveau d'eau le plus fiable. 
-
-- Ensuite, concernant le prototypage d'une carte electronique basse consommation, j'utiliserais tout d'abord une carte de devellopement qui consiste tous les composants qui sont certifie: Ultra-Low Power (Nucleo STM32, Arduino Low Power,...) pour verifier bien si mes firmwares est bien fonctionne pour cela je pourrair savoir si mon firmware d'economiser d'energie est bien fonctionne ou pas. D'ailleur,à l'aide de cette carte de developpement je pourrais mener des tests de communication (LORA, Sigfox,...) via des bus de communication standards (UART, SPI, I2C,...) pour savoir lequel est plus efficace.
-- Une fois que tous est bien verifies, on pourrais passer de faire notre propre carte qui est encore plus basse consommation et qui a le meilleur technologie de communication integre.
-
-E2: Conception Mecanique:
-- Pour les fixations pour les differentes types d'abreuvoirs, je vais examiner tout d'abord les abreuvoirs à la ferme pour identifier , les dimensions et les formes des rebords en plastique, acier et béton, pour cela je pourrais savoir quels fixations du marché sont plus adaptés à ces types d'abreuvoirs.
-- Ensuite, en consultant ces fixations existants je pourrais concevoir un systeme qui ne necessite pas d'outils complexes (vis, perceuse) mais un système de fixation universel (type pince ou clips robuste) ajustable selon le type d'abreuvoir  pour que l'éleveur puisse l'installer en quelques secondes et surtout ces supports doit résister aux contraintes mécaniques et il est amovibilite le system.
-- Puis, je vais modeliser ce systeme sur SolidWorks pour verifier si le systeme est bien dimensionne et il est bien adapte aux exigences.
-- Enfin, une fois le dessin termine, je vais imprimer des prototypes en plastique pour tester physiquement la solidite du clips sur les bacs de la ferme. D'ailleur, je vais demander à l'éleveur de tester l'installation.
-
-E3:Test & Validation:
-- Une fois que les 2 etapes precedent sont bien finis, je vais mettre en place les prototypes finaux sur les differentes abreuvoirs en verifiant si l'installation est rapide et le support est robuste et clipsable ou non.
-- Ensuite, je vais demarrer les mesurer des performances concernant le capteur, la mode communicationm, ... pour savoir s'il est bien ou non.
-- Enfin, je vais rédacter les rapports avec des propositions d'ameliorations.
-
-E4 (Si c'est possible): Creation de l'app smartphone
-- Pour l'UX (Experience Utilisateur): je vais concevoir une appli de maniere comment l'eleveur ne se voit pas difficile a` utiliser et a` comprendre. Je vais prioriser les donnees essentielles pourque l'eleveur peut prendre en main au cas danger.
-- Pour l'UI (Interface Utilisateur): Je vais essayer de creer une appli le plus simple possible a` utiliser avec des boutons tres larges qui ont des constrastes eleves et un system de notifications le plus visible et comprehensible.
-- Enfin, une fois fini l'app je vais donner au l'eleveur pour recevoir les feedback avant de l'utiliser reellement.
+*.o
+*.obj
+*.exe
+*.dll
+bin/
+obj/
+Debug/
+Release/
+*.depend
+*.layout
+*.user
+.vscode/
+.idea/
+*.zip
+moc_*.cpp
+moc_*.h
